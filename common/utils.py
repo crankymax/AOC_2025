@@ -27,10 +27,10 @@ def subtract_points(a: GridPoint, b: GridPoint) -> GridPoint:
 
 def parse_grid(raw_grid: StringIO, val_map: Callable[[str], Any] = str) -> Grid:
     """
-    Returns a dictionary of (row, col) -> value from a multi-line string input.
+    Returns a dictionary of (row, col) -> value from a multi-line string input.txt.
 
     Args:
-        raw_grid: The StringIO containing the puzzle input.
+        raw_grid: The StringIO containing the puzzle input.txt.
         val_map: A function to transform the character (e.g., int, float, or a custom function).
     """
     result = {}
@@ -65,7 +65,7 @@ def bfs_template(start_point: GridPoint, grid: dict[GridPoint, Any]) -> Optional
 
     Args:
         start_point: The starting (row, col) GridPoint.
-        grid: The input grid (used implicitly for boundary/obstacle checking).
+        grid: The input.txt grid (used implicitly for boundary/obstacle checking).
 
     Returns:
         The shortest distance to the goal, or None if unreachable.
@@ -118,7 +118,7 @@ def dfs_recursive_template(start_point: GridPoint, grid: dict[GridPoint, Any], v
 
     Args:
         start_point: The current (row, col) GridPoint.
-        grid: The input grid.
+        grid: The input.txt grid.
         visited: The set of points visited in the current search.
 
     Returns:
